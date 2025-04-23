@@ -7,15 +7,7 @@ pip3 install ai2thor attrs torch objaverse scipy openai prior mathutils
 
 to run
 ------
-python 
--m objathor.asset_conversion.pipeline_to_thor 
---uids=000074a334c541878360457c672b6c2e 
---output_dir=<some_absolute_path>
---extension=.msgpack.gz
- --annotations=<annotations_file_path> 
---live 
---blender_as_module
-
+python main.py --uid <file_name> --glb <path_to_glb> --output <path_to_output> --blender_installation_path <blender_installation_path>
 
 (example)
 python main.py --uid worn_flip_flop --glb /home/navsim/Desktop/objathor/objathor/flip_flop/worn_flip_flop.glb --output /home/navsim/Desktop/worn_flip_flop --blender_installation_path /usr/bin/blender
