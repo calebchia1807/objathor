@@ -447,4 +447,4 @@ if __name__ == "__main__":
         async_host_and_port=args.async_host_and_port,
     )
 
-    print(f"success {success}")
+    print(f"{success}")
