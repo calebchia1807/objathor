@@ -422,7 +422,7 @@ def annotate_and_optimize_asset(
 
 
 if __name__ == "__main__":
-    print(f'\nStarting...')
+    print(f'\nStarting conversion... (Will take ~20 minutes!)')
     args = parse_args()
     success = annotate_and_optimize_asset(
         uid=args.uid,
