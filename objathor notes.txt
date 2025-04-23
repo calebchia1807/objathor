@@ -1,7 +1,7 @@
 things to install
 -----------------
-
-pip3 install ai2thor attrs torch objaverse scipy openai prior
+sudo snap install blender --classic
+pip3 install ai2thor attrs torch objaverse scipy openai prior mathutils
 
 
 
@@ -18,19 +18,4 @@ python
 
 
 (example)
-python 
--m objathor.asset_conversion.pipeline_to_thor 
---uids=000074a334c541878360457c672b6c2e 
---output_dir=<some_absolute_path>
---extension=.msgpack.gz
- --annotations=<annotations_file_path> 
---live 
---blender_as_module
-
-
-python main.py \
-  --uid SQ_Plane\
-  --input /home/navsim/Desktop/objathor/objathor/assets/SQ_Plane/boeing_787-9_singapore_airlines.glb \
-  --output /home/navsim/.objathor-assets/2023_09_23/assets/SQ_Plane \
-  --skip_annotation
-
+python main.py --uid worn_flip_flop --glb /home/navsim/Desktop/objathor/objathor/flip_flop/worn_flip_flop.glb --output /home/navsim/Desktop/worn_flip_flop --blender_installation_path /usr/bin/blender

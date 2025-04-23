@@ -422,8 +422,9 @@ def annotate_and_optimize_asset(
 
 
 if __name__ == "__main__":
+    print(f'\nStarting...')
     args = parse_args()
-    annotate_and_optimize_asset(
+    success = annotate_and_optimize_asset(
         uid=args.uid,
         glb_path=args.glb,
         output_dir=args.output,
@@ -445,3 +446,5 @@ if __name__ == "__main__":
         compute_blender_thor_similarity=args.compute_similarity,
         async_host_and_port=args.async_host_and_port,
     )
+
+    print(f"success {success}")

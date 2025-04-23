@@ -21,10 +21,10 @@ try:
         save_thor_asset_file,
     )
 
-    warnings.warn(
-        f"Could not import objathor.asset_conversion.util, current paths are {sys.path}."
-        f" Will try to import it from a relative path."
-    )
+    # warnings.warn(
+    #     f"Could not import objathor.asset_conversion.util, current paths are {sys.path}."
+    #     f" Will try to import it from a relative path."
+    # )
 except ImportError:
     try:
         from util import (
