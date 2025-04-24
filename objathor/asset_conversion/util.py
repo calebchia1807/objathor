@@ -339,12 +339,12 @@ def change_asset_paths(asset, save_dir):
         asset["name"],
         os.path.basename(asset["albedoTexturePath"]),
     )
-    if "metallicSmoothnessTexturePath" in asset:
-        asset["metallicSmoothnessTexturePath"] = os.path.join(
-            save_dir,
-            asset["name"],
-            os.path.basename(asset["metallicSmoothnessTexturePath"]),
-        )
+    # if "metallicSmoothnessTexturePath" in asset:
+    #     asset["metallicSmoothnessTexturePath"] = os.path.join(
+    #         save_dir,
+    #         asset["name"],
+    #         os.path.basename(asset["metallicSmoothnessTexturePath"]),
+        # )
     asset["normalTexturePath"] = os.path.join(
         save_dir,
         asset["name"],

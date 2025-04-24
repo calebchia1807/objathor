@@ -900,6 +900,8 @@ def main(args):
     # noinspection PyTestUnpassedFixture
     optimize_assets_for_thor(
         output_dir=args.output_dir,
+        uid=args.uids,
+        glb_path=args.glb_paths,
         uid_to_glb_path=uid_to_glb_path,
         annotations_path=args.annotations,
         max_colliders=args.max_colliders,
