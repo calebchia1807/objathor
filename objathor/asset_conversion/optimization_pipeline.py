@@ -206,7 +206,7 @@ def glb_to_thor(
         save_dir = os.path.dirname(thor_obj_path)
         for k in [
             "albedo",
-            # "metallic_smoothness",
+            "metallic_smoothness",
             "normal",
             "emission",
             # "roughness",
@@ -223,18 +223,18 @@ def glb_to_thor(
             #     continue
 
             input_path = png_path
-            # if k == "metallic_smoothness":
-            #     # Don't want to convert metallic smoothness to jpg as this would destroy the smoothness
-            #     # which is encoded in the alpha channel. Instead we move the smoothness to the B channel
-            #     # (which isn't storing any relevant information) and then convert to jpg.
-            #     img = np.array(
-            #         PIL.Image.open(input_path).convert("RGBA"), dtype=np.uint8
-            #     )
-            #     img[:, :, 1] = img[:, :, 0]
-            #     img[:, :, 2] = img[:, :, 3]
-            #     img[:, :, 3] = 255
-            #     PIL.Image.fromarray(img).convert("RGB").save(jpg_path)
-            #     input_path = jpg_path
+            if k == "metallic_smoothness":
+                # Don't want to convert metallic smoothness to jpg as this would destroy the smoothness
+                # which is encoded in the alpha channel. Instead we move the smoothness to the B channel
+                # (which isn't storing any relevant information) and then convert to jpg.
+                img = np.array(
+                    PIL.Image.open(input_path).convert("RGBA"), dtype=np.uint8
+                )
+                img[:, :, 1] = img[:, :, 0]
+                img[:, :, 2] = img[:, :, 3]
+                img[:, :, 3] = 255
+                PIL.Image.fromarray(img).convert("RGB").save(jpg_path)
+                input_path = jpg_path
 
             compress_image_to_ssim_threshold(
                 input_path=input_path,
@@ -242,15 +242,15 @@ def glb_to_thor(
                 threshold=0.95,
             )
 
-            # if k not in ["roughness", "metallic"]:
-            #     os.remove(png_path)
+            if k not in ["roughness", "metallic"]:
+                os.remove(png_path)
 
-                # if k == "metallic_smoothness":
-                #     k = "metallicSmoothness"
+                if k == "metallic_smoothness":
+                    k = "metallicSmoothness"
 
-                # asset_json[f"{k}TexturePath"] = asset_json[f"{k}TexturePath"].replace(
-                #     ".png", ".jpg"
-                # )
+                asset_json[f"{k}TexturePath"] = asset_json[f"{k}TexturePath"].replace(
+                    ".png", ".jpg"
+                )
 
         y_rot = compute_thor_rotation_to_obtain_min_bounding_box(
             asset_json["vertices"], max_deg_change=45, increments=91
