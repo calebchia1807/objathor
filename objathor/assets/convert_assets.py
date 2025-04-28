@@ -29,7 +29,7 @@ for idx, filename in enumerate(glb_files, start=1):
         '--blender_installation_path', blender_path
     ]
 
-    print(f"[{idx}/{num_files}] Converting: {uid}...")
+    print(f"[{idx}/{num_files}] Converting: {uid}")
     
     try:
         subprocess.run(command, check=True)
