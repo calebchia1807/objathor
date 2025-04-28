@@ -6,11 +6,15 @@ pip3 install ai2thor attrs torch objaverse scipy openai prior mathutils
 
 to run
 ------
+# in ~/objathor/objathor/assets/ folder, this script will convert all glb files into thor assets in one go, just drop all your assets here!
+python3 convert_assets.py 
+
+# if u want to convert only one file
 python main.py --uid <file_name> --glb <path_to_glb> --output <path_to_output> --blender_installation_path <blender_installation_path>
 **uid file_name must be the same as the glb_file name
 
 (example)
-python main.py --uid worn_flip_flop --glb /home/navsim/Desktop/objathor/objathor/asset/worn_flip_flop.glb --output /home/navsim/.objathor-assets/2023_09_23/assets/ --extension .pkl.gz --blender_installation_path /usr/local/bin/blender 
+python main.py --uid worn_flip_flop --glb /home/navsim/Desktop/objathor/objathor/assets/worn_flip_flop.glb --output /home/navsim/.objathor-assets/2023_09_23/assets/ --extension .pkl.gz --blender_installation_path /usr/local/bin/blender 
 
 
 after objathor asset generated
