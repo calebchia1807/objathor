@@ -11,6 +11,11 @@
 - Conda Environment
 
 ## Installation
+Create conda environment
+```bash
+conda create --name objathor python=3.10.12
+```
+
 Install ai2thor:
 ```bash
 pip install --extra-index-url https://ai2thor-pypi.allenai.org ai2thor==0+455cf72a1c8e0759a452422f2128fbc93a3cb06b
