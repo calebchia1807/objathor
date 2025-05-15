@@ -93,3 +93,6 @@ Run:
 python main.py --uid <file_name> --glb <path_to_glb> --output <path_to_output> --blender_installation_path <blender_installation_path>
 ```
 #### **uid's <file_name> must be the same as the .glb name in glb's <path_to_glb>
+
+
+#### Possible for USD files to be converted into .glb files before using this repo to convert into THOR asset!
