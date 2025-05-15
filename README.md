@@ -27,7 +27,7 @@ pip install objathor[annotation]
 pip3 install ai2thor attrs torch objaverse scipy openai prior mathutils
 ```
 
-Here the following extras are installed: `annotation` to use openai to generate annotations. Also for annotation functionality you must install `nltk` [Install nltk](#nltk-dependencies). To generate renders and convert 'glb' models in the conversion pipeline you must [Install Blender](#blender-install-instructions) .
+Here the following extras are installed: `annotation` to use openai to generate annotations. Also for annotation functionality you must install `nltk` [Install nltk](#nltk-dependencies). To generate renders and convert 'glb' models in the conversion pipeline **you must install Blender v3.4**.
 
 From source:
 ```bash
@@ -59,12 +59,12 @@ python -c "from ai2thor.controller import Controller; from objathor.constants im
 
 ## Usage
 ### Convert all assets in one go
-1. Add all .glb files into ```~/objathor/assets/``` folder.
+1. Add all .glb files into ```~/objathor/objathor/assets/``` folder.
 2. Run the following command to convert all the assets in the folder into THOR asset(s):
    ```bash
    python3 convert_assets.py
    ```
-   #### Please open this [python script](~/objathor/assets/convert_assets.py) and update all file paths where necessary before running.
+   #### Please open this [python script](/objathor/assets/convert_assets.py) and update all file paths where necessary before running.
 
 ### Convert one asset only
 Run:
