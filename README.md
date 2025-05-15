@@ -27,7 +27,7 @@ pip install objathor[annotation]
 pip3 install ai2thor attrs torch objaverse scipy openai prior mathutils
 ```
 
-Here the following extras are installed: `annotation` to use openai to generate annotations. Also for annotation functionality you must install `nltk` [Install nltk](#nltk-dependencies). To generate renders and convert 'glb' models in the conversion pipeline you must install [install blender 3.4](#blender-3.4-installation).
+Here the following extras are installed: `annotation` to use openai to generate annotations. Also for annotation functionality you must install `nltk` [Install nltk](#nltk-dependencies). To generate renders and convert 'glb' models in the conversion pipeline you must install [install blender 3.4](#blender-34-installation).
 
 From source:
 ```bash
