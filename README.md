@@ -27,7 +27,7 @@ pip install objathor[annotation]
 pip3 install ai2thor attrs torch objaverse scipy openai prior mathutils
 ```
 
-Here the following extras are installed: `annotation` to use openai to generate annotations. Also for annotation functionality you must install `nltk` [Install nltk](#nltk-dependencies). To generate renders and convert 'glb' models in the conversion pipeline **you must install Blender v3.4**.
+Here the following extras are installed: `annotation` to use openai to generate annotations. Also for annotation functionality you must install `nltk` [Install nltk](#nltk-dependencies). To generate renders and convert 'glb' models in the conversion pipeline you must install [install blender 3.4](#blender-3.4-installation).
 
 From source:
 ```bash
@@ -39,7 +39,7 @@ We recommend setting an environment variable with your OpenAI key:
 export OPENAI_API_KEY=[Your key]
 ```
 
-### NLTK dependencies
+### NLTK Dependencies
 Install `nltk` on this commit by running:
 ```bash
 pip install git+https://github.com/nltk/nltk@582e6e35f0e6c984b44ec49dcb8846d9c011d0a8
@@ -48,6 +48,27 @@ pip install git+https://github.com/nltk/nltk@582e6e35f0e6c984b44ec49dcb8846d9c01
 During the first run, NLTK dependencies are automatically installed, but we can also install them ahead:
 ```bash
 python -c "import nltk; nltk.download('punkt'); nltk.download('wordnet2022'); nltk.download('brown'); nltk.download('averaged_perceptron_tagger')"
+```
+
+### Blender 3.4 Installation
+Run the following to install blender 3.4:
+1. To remove any symlink to other blender versions
+```bash
+sudo rm /usr/local/bin/blender
+```
+2. To download Blender 3.4
+```bash
+cd ~/Downloads
+wget https://download.blender.org/release/Blender3.4/blender-3.4.0-linux-x64.tar.xz
+tar -xf blender-3.4.0-linux-x64.tar.xz
+```
+3. Move it to /opt for system-wide use
+```bash
+sudo mv blender-3.4.0-linux-x64 /opt/blender-3.4
+```
+4. Create new symlink
+``` bash
+sudo ln -s /opt/blender-3.4/blender /usr/local/bin/blender
 ```
 
 ### AI2-THOR binary pre-downloading
