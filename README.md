@@ -79,6 +79,8 @@ python -c "from ai2thor.controller import Controller; from objathor.constants im
 (`platform='OSXIntel64'` would be used for a MacOS environment).
 
 ## Usage
+#### Possible for USD files to be converted into .glb files before using this repo to convert into THOR asset!
+
 ### Convert all assets in one go
 1. Add all .glb files into ```~/objathor/objathor/assets/``` folder.
 2. Run the following command to convert all the assets in the folder into THOR asset(s):
@@ -93,6 +95,3 @@ Run:
 python main.py --uid <file_name> --glb <path_to_glb> --output <path_to_output> --blender_installation_path <blender_installation_path>
 ```
 #### **uid's <file_name> must be the same as the .glb name in glb's <path_to_glb>
-
-
-#### Possible for USD files to be converted into .glb files before using this repo to convert into THOR asset!
