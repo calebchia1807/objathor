@@ -14,6 +14,9 @@ glb_files = [f for f in os.listdir(asset_folder) if f.endswith('.glb')]
 num_files = len(glb_files)
 print(f"Found {num_files} GLB file(s) for conversion.\n")
 
+success_count = 0
+failed_assets = []
+
 # Process each .glb file
 for idx, filename in enumerate(glb_files, start=1):
     uid = os.path.splitext(filename)[0]  # filename without extension
@@ -34,8 +37,12 @@ for idx, filename in enumerate(glb_files, start=1):
     try:
         subprocess.run(command, check=True)
         print(f"[{idx}/{num_files}] Successfully converted: {uid}\n")
+        success_count += 1
     except subprocess.CalledProcessError as e:
         print(f"[{idx}/{num_files}] Failed to convert: {uid}")
         print(f"Error: {e}\n")
+        failed_assets.append(filename)
 
-print("All asset conversions completed.")
+print(f"{success_count} asset conversion(s) completed.")
+print(f"{num_files - success_count} asset conversion(s) failed!")
+print(failed_assets)
