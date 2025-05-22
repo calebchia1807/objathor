@@ -45,4 +45,4 @@ for idx, filename in enumerate(glb_files, start=1):
 
 print(f"{success_count} asset conversion(s) completed.")
 print(f"{num_files - success_count} asset conversion(s) failed!")
-print(failed_assets)
+print(f'Failed assets: {failed_assets}')
