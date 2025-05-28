@@ -74,6 +74,10 @@ sudo mv blender-3.4.0-linux-x64 /opt/blender-3.4
 ``` bash
 sudo ln -s /opt/blender-3.4/blender /usr/local/bin/blender
 ```
+5. Set blender path
+```bash
+export BLENDER_PATH=$(which blender)
+```
 
 ### AI2-THOR binary pre-downloading
 Assuming we're running on a remote Linux server, we can pre-download the THOR binaries with:
