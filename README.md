@@ -7,7 +7,6 @@
 </h4>
 
 ## Requirements
-- Blender 3.4 **(Ensure this is downloaded)**
 - Conda Environment
 
 ## Installation
