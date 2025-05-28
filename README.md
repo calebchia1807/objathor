@@ -20,6 +20,10 @@ Install ai2thor:
 ```bash
 pip install --extra-index-url https://ai2thor-pypi.allenai.org ai2thor==0+455cf72a1c8e0759a452422f2128fbc93a3cb06b
 ```
+Clone repo:
+```bash
+git clone https://github.com/calebchia1807/objathor.git
+```
 
 Change directory to repo and install other dependencies:
 ```bash
