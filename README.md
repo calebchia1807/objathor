@@ -13,6 +13,7 @@
 Create conda environment
 ```bash
 conda create --name objathor python=3.10
+conda activate objathor
 ```
 
 Install ai2thor:
