@@ -21,7 +21,7 @@ Install ai2thor:
 pip install --extra-index-url https://ai2thor-pypi.allenai.org ai2thor==0+455cf72a1c8e0759a452422f2128fbc93a3cb06b
 ```
 
-Install other dependencies:
+Change directory to repo and install other dependencies:
 ```bash
 pip install objathor[annotation]
 pip3 install ai2thor attrs torch objaverse scipy openai prior mathutils
