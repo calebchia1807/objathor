@@ -47,6 +47,7 @@ export OPENAI_API_KEY=[Your key]
 Install `nltk` on this commit by running:
 ```bash
 pip install git+https://github.com/nltk/nltk@582e6e35f0e6c984b44ec49dcb8846d9c011d0a8
+python -m nltk.downloader all
 ```
 
 During the first run, NLTK dependencies are automatically installed, but we can also install them ahead:
