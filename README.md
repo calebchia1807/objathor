@@ -56,7 +56,7 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('wordnet2022'); nl
 
 ### Blender 3.4 Installation
 Run the following to install blender 3.4:
-1. To remove any symlink to other blender versions
+1. (Optional) To remove any symlink to other blender versions
 ```bash
 sudo rm /usr/local/bin/blender
 ```
